@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="MOVIMENTOS_MANUAIS")
-public class MovimentosManuais {
+public class MovimentosManuais implements Comparable<MovimentosManuais>{
 	
 	@Column(name = "DAT_MES")
 	private Integer datMes;
@@ -39,4 +39,12 @@ public class MovimentosManuais {
 	
 	@Column(name = "VAL_VALOR")
 	private Double valValor;
+
+	@Override
+	public int compareTo(MovimentosManuais o) {
+		if(this.numLancamento > o.numLancamento) {
+			return 1;
+		}
+		return 0;
+	}
 }
