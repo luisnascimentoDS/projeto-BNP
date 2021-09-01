@@ -1,25 +1,18 @@
-package com.bnp.movimentomanual;
+package com.bnp.movimentosmanuais;
 
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name="MOVIMENTO_MANUAIS")
-@SequenceGenerator(name = "SQ_PRODUTO", sequenceName = "DB_DUPLICIDADE.SQ_PRODUTO", allocationSize = 1)
-public class MovimentoManuais {
+@Table(name="MOVIMENTOS_MANUAIS")
+public class MovimentosManuais {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PRODUTO")
 	@Column(name = "DAT_MES")
 	private Integer datMes;
 	

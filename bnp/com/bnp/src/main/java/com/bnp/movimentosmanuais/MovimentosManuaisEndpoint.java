@@ -1,4 +1,4 @@
-package com.bnp.produto;
+package com.bnp.movimentosmanuais;
 
 import java.util.List;
 
@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bnp.produto.Produto;
+import com.bnp.produto.ProdutoService;
+
 @RestController
-@RequestMapping(value = "/produto") 
-public class ProdutoEndpoint {
+@RequestMapping(value = "/movimentos-manuais") 
+public class MovimentosManuaisEndpoint {
 	
 	@Autowired
 	private ProdutoService produtoService;
